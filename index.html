@@ -40,21 +40,6 @@ SAMXBET
 🔥 Live match prediction for cricket trading 🔥
 </p>
  
-<!-- 🔴 TIMER HEADING -->
-<h3 style="color:red; margin-bottom:5px;">
-FREE JOINING ENDS IN
-</h3>
-
-<!-- 🔴 TIMER -->
-<div id="timer"
-style="
-font-size:32px;
-font-weight:bold;
-color:red;
-margin-bottom:20px;
-">
-00:30
-</div>
  
 <!-- FEATURES -->
 <div style="
@@ -87,6 +72,23 @@ margin-bottom: 25px;
 • T20 World Cup: 53/55 pass
 </div>
 
+ <!-- 🔴 TIMER HEADING -->
+<h4 style="color:red; margin-bottom:5px;">
+FREE JOINING ENDS IN
+</h4>
+
+<!-- 🔴 TIMER -->
+<div id="timer"
+style="
+font-size:32px;
+font-weight:bold;
+color:red;
+margin-bottom:20px;
+">
+00:30
+</div>
+<a id="joinLink" href="https://t.me/+DymfiH4mjRk2YmY1">
+
 <!-- JOIN BUTTON -->
 <a href="https://t.me/+DymfiH4mjRk2YmY1"
 style="
@@ -117,21 +119,29 @@ WITH BEST RESULT
  
  <!-- ⏱ TIMER SCRIPT -->
 <script>
-let timeLeft = 30;
-let timer = document.getElementById("timer");
-let link = document.getElementById("https://t.me/+DymfiH4mjRk2YmY1").href;
+document.addEventListener("DOMContentLoaded", function () {
 
-let countdown = setInterval(function() {
-    let seconds = timeLeft < 10 ? "0" + timeLeft : timeLeft;
-    timer.innerHTML = "00:" + seconds;
+    let timeLeft = 30;
+    let timer = document.getElementById("timer");
+    let joinLink = document.getElementById("joinLink").href;
 
-    if (timeLeft <= 0) {
-        clearInterval(countdown);
-        window.location.href = link;
-    }
-    timeLeft--;
-}, 1000);
+    let countdown = setInterval(function () {
+
+        let seconds = timeLeft < 10 ? "0" + timeLeft : timeLeft;
+        timer.innerHTML = "00:" + seconds;
+
+        if (timeLeft === 0) {
+            clearInterval(countdown);
+            window.location.href = joinLink;
+        }
+
+        timeLeft--;
+
+    }, 1000);
+
+});
 </script>
+
 
 </body>
 </html>
